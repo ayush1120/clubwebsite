@@ -1,0 +1,70 @@
+{% load widget_tweaks %}
+
+<div class="row">
+    <form class="col s12" method="post">
+      <div class="row">
+        <div class="input-field">
+              <div class="fieldWrapper">
+                    {{ form.first_name.errors }}
+                    {{ form.first_name|add_class:"validate" }}
+                    <label for="{{ form.cc_myself.id_for_label }}">First Name</label>
+                    {% if form.first_name.help_text %}
+                    <p class="help">{{ form.first_name.help_text|safe }}</p>
+                      {% endif %}
+                  </div>
+          </div>
+          <div class="input-field">
+                <div class="fieldWrapper">
+                      {{ form.last_name.errors }}
+                      {{ form.last_name|add_class:"validate" }}
+                      <label for="{{ form.cc_myself.id_for_label }}">Last Name</label>
+                      {% if form.last_name.help_text %}
+                      <p class="help">{{ form.last_name.help_text|safe }}</p>
+                        {% endif %}
+                    </div>
+            </div>
+
+      </div>
+      <div class="row input-field">
+        <div class="fieldWrapper">
+              {{ form.username.errors }}
+              {{ form.username|add_class:"validate" }}
+              <label for="{{ form.cc_myself.id_for_label }}">Username</label>
+              {% if form.username.help_text %}
+              <p class="help">{{ form.username.help_text|safe }}</p>
+                {% endif %}
+            </div>
+      </div>
+      <div class="row input-field">
+        <div class="fieldWrapper">
+              {{ form.email.errors }}
+              {{ form.email|add_class:"validate" }}
+              <label for="{{ form.cc_myself.id_for_label }}">E-Mail</label>
+              {% if form.email.help_text %}
+              <p class="help">{{ form.email.help_text|safe }}</p>
+                {% endif %}
+            </div>
+      </div>
+      <div class="row input-field">
+        <div class="fieldWrapper">
+              {{ form.password.errors }}
+              {{ form.password|add_class:"validate" }}
+              <label for="{{ form.cc_myself.id_for_label }}">Password</label>
+              {% if form.password.help_text %}
+              <p class="help">{{ form.password.help_text|safe }}</p>
+                {% endif %}
+            </div>
+      </div>
+      <div class="row input-field">
+        <div class="fieldWrapper">
+              {{ form.confirm_password.errors }}
+              {{ form.confirm_password|add_class:"validate" }}
+              <label for="{{ form.cc_myself.id_for_label }}">Confirm Password</label>
+              {% if form.confirm_password.help_text %}
+              <p class="help">{{ form.confirm_password.help_text|safe }}</p>
+                {% endif %}
+            </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action2">Submit<i class="material-icons right">send</i></button>
+    </form>
+  </div>
