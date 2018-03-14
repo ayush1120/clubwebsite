@@ -1,0 +1,94 @@
+{% extends "home/mainpage.html" %}
+
+{% block title %}
+Site
+{% endblock %}
+
+{% block body %}
+{% load staticfiles %}
+
+
+
+
+<div class="row">
+    <div class="col 4">
+      <div class="card brown lighten-2">
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="small material-icons">menu</i></a>
+        <ul id="slide-out" class="fixed side-nav">
+          <li><div class="user-view">
+            <a href="#!user"><img class="circle" src="{% static "img/yuna.jpg" %}"></a>
+            <a href="#!name"><span class="grey-text name">John Doe</span></a>
+            <a href="#!email"><span class="grey-text email">jdandturk@gmail.com</span></a>
+          </div></li>
+
+          <li><a href="#!">First Link With Icon<i class="material-icons">cloud</i></a></li>
+          <li><a href="#!">Second Link</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Subheader</a></li>
+
+          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+          <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+              <li>
+                <div class="collapsible-header"><i class="tiny material-icons">mood</i>About Us </div>
+                <div class="collapsible-body">
+                  <ul>
+                    <li >{% include "home/aboutuscard.html" %}</li>
+                    <li>{% include "home/aboutuscard.html" %}</li>
+                    <li>{% include "home/aboutuscard.html" %}</li>
+                    <li>{% include "home/aboutuscard.html" %}</li>
+                    <li>{% include "home/aboutuscard.html" %}</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+      <!-- <div class="carousel col 4">
+        <br><br><br><br>
+        <a class="carousel-item" href="#one!"><img src="{% static "img/SPY_BOT P1.JPG" %}"></a>
+        <a class="carousel-item" href="#two!"><img src="{% static "img/SPY_BOT P2.JPG" %}"></a>
+        <a class="carousel-item" href="#three!"><img src="{% static "img/SPY_BOT P3.JPG" %}"></a>
+        <a class="carousel-item" href="#four!"><img src="{% static "SPY_BOT P4.JPG" %}"></a>
+        <a class="carousel-item" href="#five!"><img src="{% static "SPY_BOT P5.JPG" %}"></a>
+    </div> -->
+
+      <div class="row">
+          <div class="col 11 right">
+            <br><br>
+            <div class="card hoverable">
+                  <div class="card-tabs tabs-fixed-width">
+                    <ul class="tabs ">
+                      <li class="tab"><a class="active" href="#test4">Login</a></li>
+                      <li class="tab"><a href="#test5">Register</a></li>
+                    </ul>
+                  </div>
+                  <div class="card-content grey lighten-4">
+                    <div id="test4">{% include "home/loginform.html" %}</div>
+                    <div id="test5">Test 2</div>
+                  </div>
+            </div>
+          </div>
+      </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

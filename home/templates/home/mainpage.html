@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  {% load staticfiles %}
+  <title>{% block title %}{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="{% static "css/materialize.css" %}">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="{% static "js/materialize.js" %}"> </script>
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+
+    $(".button-collapse").sideNav();
+
+    $('.carousel').carousel();
+
+    $('.carousel-slider').slider({full_width: true});
+
+    $('.carousel.carousel-slider').carousel({fullWidth: false});
+
+    $('ul.tabs').tabs();
+
+  });
+
+  </script>
+
+
+
+  <style media="screen">
+    body {
+          background: url({% static "img/background.jpg" %});
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+    }
+  </style>
+
+
+</head>
+<body >
+
+
+    {% block body %}
+    {% endblock %}
+
+
+</body>
+</html>
