@@ -48,14 +48,14 @@ Site
       </div>
     </div>
 
-      <!-- <div class="carousel col 4">
+       <div class="carousel col 4">
         <br><br><br><br>
         <a class="carousel-item" href="#one!"><img src="{% static "img/SPY_BOT P1.JPG" %}"></a>
         <a class="carousel-item" href="#two!"><img src="{% static "img/SPY_BOT P2.JPG" %}"></a>
         <a class="carousel-item" href="#three!"><img src="{% static "img/SPY_BOT P3.JPG" %}"></a>
         <a class="carousel-item" href="#four!"><img src="{% static "SPY_BOT P4.JPG" %}"></a>
         <a class="carousel-item" href="#five!"><img src="{% static "SPY_BOT P5.JPG" %}"></a>
-    </div> -->
+    </div>
 
       <div class="row">
           <div class="col 11 right">
@@ -63,13 +63,15 @@ Site
             <div class="card hoverable">
                   <div class="card-tabs">
                     <ul class="tabs ">
-                      <li class="tab"><a class="active" href="#test4">Login</a></li>
-                      <li class="tab"><a href="#test5">Register</a></li>
+                      <li class="tab"><a class="active" href="#test5">Login</a></li>
+                      <li class="tab"><a  href="#test4">Register</a></li>
+
                     </ul>
                   </div>
-                  <div class="card-content grey lighten-4">
-                    <div id="test4">{% include "home/loginform.html" %}</div>
-                    <div id="test5">{% include "home/registerform.html" %}</div>
+                  <div class="card-content white-text blue-grey">
+                    <div id="test4">{% include "home/registerform.html" %}</div>
+                    <div id="test5">{% include "home/loginform.html" %}</div>
+
                   </div>
             </div>
           </div>
