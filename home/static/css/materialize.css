@@ -8202,8 +8202,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .carousel.carousel-slider {
-  top: 0;
-  left: 0;
+  top: 150px;
+  left: 150px;
 }
 
 .carousel.carousel-slider .carousel-fixed-item {
