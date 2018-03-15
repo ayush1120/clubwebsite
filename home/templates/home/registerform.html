@@ -4,7 +4,7 @@
     <form class="col s12" method="post">
        {% csrf_token %}
       <div class="row">
-        <div class="input-field">
+        <div class="input-field col 6">
               <div class="fieldWrapper">
                     {{ form.first_name.errors }}
                     {{ form.first_name|add_class:"validate" }}
@@ -14,7 +14,7 @@
                       {% endif %}
                   </div>
           </div>
-          <div class="input-field">
+          <div class="input-field col 6">
                 <div class="fieldWrapper">
                       {{ form.last_name.errors }}
                       {{ form.last_name|add_class:"validate" }}
