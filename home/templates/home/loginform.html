@@ -1,20 +1,27 @@
+
 <div class="row">
-    <form class="col s12">
+    <form action="{% url 'home:index' %}" method="post" class="col s12">
+      {% csrf_token %}
+      {% if login_error %}
+          <p>{{login_error}}</p>
+      {% endif %}
+
       <div class="row">
         <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
+          <input id="usrname" type="text" name="username" class="validate">
+          <label for="usrname">Username</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
+          <input id="pass" type="password" name="password" class="validate">
+          <label for="pass">Password</label>
         </div>
-        <a class="waves-effect waves-light btn right-align"><i class="material-icons left">label</i>button</a>
+        <button class="btn waves-effect waves-light" type="submit" name='A'>Log In</button>
       </div>
           </div>
         </div>
       </div>
     </form>
+    <br>
   </div>
