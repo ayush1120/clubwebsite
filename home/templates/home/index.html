@@ -48,7 +48,7 @@ Site
       </div>
     </div>
 
-       <div class="carousel carousel-slider">
+       <div class="col 4 carousel carousel-slider">
         <br><br><br><br>
         <a class="carousel-item" href="#one!"><img src="{% static "img/SPY_BOT P1.JPG" %}"></a>
         <a class="carousel-item" href="#two!"><img src="{% static "img/SPY_BOT P2.JPG" %}"></a>
@@ -62,13 +62,13 @@ Site
             <br><br>
             <div class="card hoverable">
                   <div class="card-tabs">
-                    <ul class="tabs ">
+                    <ul class="tabs tabs-fixed-width ">
                       <li class="tab"><a class="active" href="#test5">Login</a></li>
                       <li class="tab"><a  href="#test4">Register</a></li>
 
                     </ul>
                   </div>
-                  <div class="card-content white-text blue-grey">
+                  <div class="card-content fixed-width white-text blue-grey">
                     <div id="test4">{% include "home/registerform.html" %}</div>
                     <div id="test5">{% include "home/loginform.html" %}</div>
 

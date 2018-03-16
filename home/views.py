@@ -51,3 +51,10 @@ def index(request):
 
 
     return  render(request, 'home/index.html',{'form':form,'login_error':login_error})
+
+
+
+
+@login_required
+def dashboard(request):
+    return render(request, 'home/dashboard.html')
