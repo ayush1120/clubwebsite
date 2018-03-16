@@ -9,10 +9,11 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
 
+
 def index(request):
     print('in index')
     form = RegisterForm()
-    login_error=""
+    login_error = ""
 
     if request.method == 'POST':
         print("posted")
@@ -21,20 +22,19 @@ def index(request):
             username = request.POST.get('username')
             password = request.POST.get('password')
 
-            user = authenticate(username=username,password=password)
+            user = authenticate(username=username, password=password)
 
             if user:
                 print("user authenticated")
-                if user.is_active :
-                    login(request,user)
-                    return HttpResponse("User Logged in")
+                if user.is_active:
+                    login(request, user)
+                    return redirect('/user')
 
                 else:
                     return HttpResponse("Account not Active")
             else:
                 login_error = "Invalid Username or Password"
-                return  render(request, 'home/index.html',{'form':form,'login_error':login_error})
-
+                return render(request, 'home/index.html', {'form': form, 'login_error': login_error})
 
         elif 'B' in request.POST:
             form = RegisterForm(request.POST)
@@ -44,15 +44,12 @@ def index(request):
                 user.set_password(user.password)
                 user.save()
                 form = RegisterForm()
-                return render(request, 'home/index.html',{'form':form})
+                return render(request, 'home/index.html', {'form': form})
             else:
                 print(form.errors)
-                return render(request, 'home/index.html',{'form':form})
+                return render(request, 'home/index.html', {'form': form})
 
-
-    return  render(request, 'home/index.html',{'form':form,'login_error':login_error})
-
-
+    return render(request, 'home/index.html', {'form': form, 'login_error': login_error})
 
 
 @login_required
