@@ -1,11 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from home.forms import RegisterForm
+from home.models import Component
 
 #
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
+
+
 
 # Create your views here.
 
@@ -54,4 +57,8 @@ def index(request):
 
 @login_required
 def dashboard(request):
-    return render(request, 'home/dashboard.html')
+	current_user = request.user
+	print(current_user.first_name, current_user.username)
+	return render(request, 'home/dashboard.html' ,)
+
+
